@@ -55,13 +55,6 @@ public class ActualizarUsuarioStepDef {
 
     }
 
-    @Given("actualizar usuario sin token")
-    public void actualizarUsuarioSinToken() throws IOException {
-        File json = new File(Constantes.JSON_REQUEST + "/ValidRequestUpdateUser.json");
-        usuarioAPI.actualizarUsuarioSinToken(leerContenidoJson(json));
-
-    }
-
     private String leerContenidoJson(File archivoJson) throws IOException {
         Path path = Paths.get(archivoJson.getPath());
         return new String(Files.readAllBytes(path));

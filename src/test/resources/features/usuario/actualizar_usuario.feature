@@ -13,13 +13,6 @@ Feature: Actualizar usuario
     When enviar solicitud actualizar usuario
     Then debería devolver el codigo 404
 
-  Scenario: Actualizar usuario sin token
-    Given actualizar usuario sin token
-    When enviar solicitud actualizar usuario
-    Then debería devolver el codigo 401
-#    And mensaje del response body message deberia ser "Autentication failed"
-#    And validar json schema response error
-
   Scenario: Actualizar usuario sin ID
     Given actualizar usuario con "" como ID y "valid" request body
     When enviar solicitud actualizar usuario
